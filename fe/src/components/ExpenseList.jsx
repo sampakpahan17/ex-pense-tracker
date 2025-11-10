@@ -20,7 +20,7 @@ export default function ExpenseList({ transactions, refresh }) {
                     t.type === "income" ? "text-green-600" : "text-red-600"
                   }`}
                 >
-                  Rp {t.amount.toLocaleString()}
+                  Rp {(Number(t.amount) || 0).toLocaleString()}
                 </p>
                 <button
                   onClick={() => {
