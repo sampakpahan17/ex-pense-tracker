@@ -6,7 +6,7 @@
 |------|-----|----------------|
 | **Samuel G. Christian Pakpahan** *(Ketua)* | 221113531 | Setup Backend & Frontend, Docker Deployment, GitHub Actions, CI/CD |
 | **Jocelyn** | 221110108 | UI/UX Design, Integrasi Frontend dengan API, Responsiveness |
-| **Maesi** | 221112816 | API Testing, Validasi Data, Dokumentasi Endpoint |
+| **Maesi Sarah** | 221112816 | API Testing, Validasi Data, Dokumentasi Endpoint |
 | **Sontiar Eseria Tampubolon** | 221112223 | Docker Compose Setup, Monitoring, Testing Deployment |
 
 ---
