@@ -1,80 +1,83 @@
-# 💰 Expense Tracker - Bug4Fun
+# 💰 Expense Tracker  
+### _UTS DevOps Project — Kelompok Bug4Fun_
 
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/sampakpahan17/ex-pense-tracker/docker-build.yml?label=CI%2FCD%20Build&logo=github)
+![Docker Pulls](https://img.shields.io/docker/pulls/samsz07/ex-pense-fe?label=Docker%20Frontend&logo=docker)
+![Docker Pulls](https://img.shields.io/docker/pulls/samsz07/ex-pense-be?label=Docker%20Backend&logo=docker)
+![License](https://img.shields.io/badge/license-MIT-green.svg)
 ![Build Status](https://github.com/samsz07/ex-pense-tracker/actions/workflows/docker-build.yml/badge.svg)
 ![Python](https://img.shields.io/badge/python-3.11-blue)
 ![FastAPI](https://img.shields.io/badge/FastAPI-Backend-success)
 ![React](https://img.shields.io/badge/React-Frontend-61dafb)
 ![Docker](https://img.shields.io/badge/Docker-Automated-blue)
 
----
+![Preview Aplikasi](https://drive.google.com/uc?export=view&id=YOUR_IMAGE_ID_1)
 
-## 👨‍💻 Kelompok Bug4Fun
-
-| No | Nama | NIM | Keterangan |
-|----|------|-----|-------------|
-| 1 | **Samuel G. Christian Pakpahan** | 221113531 | Ketua Kelompok |
-| 2 | **Jocelyn** | 221110108 | Anggota |
-| 3 | **Maesi** | 221112816 | Anggota |
-| 4 | **Sontiar Eseria Tampubolon** | 221112223 | Anggota |
+> _Aplikasi pencatat pemasukan & pengeluaran berbasis web dengan integrasi backend dan frontend melalui Docker dan CI/CD GitHub Actions._
 
 ---
 
-## 📘 Deskripsi Proyek
-
-**Expense Tracker** adalah aplikasi sederhana untuk mencatat dan memantau transaksi keuangan pribadi.  
-Proyek ini dikembangkan menggunakan **FastAPI** untuk backend dan **React + TailwindCSS** untuk frontend.  
-Selain itu, CI/CD terintegrasi menggunakan **GitHub Actions** yang otomatis membangun dan push image ke **Docker Hub**.
-
----
-
-## 🧩 Struktur Folder
-
-```
-ex-pense-tracker/
-├── .github/
-│   └── workflows/
-│       └── docker-build.yml
-├── be/                      # Backend (FastAPI)
-│   ├── app/
-│   │   ├── main.py
-│   │   ├── models.py
-│   │   └── database.json
-│   ├── requirements.txt
-│   └── Dockerfile
-├── fe/                      # Frontend (React + Vite)
-│   ├── src/
-│   ├── package.json
-│   └── Dockerfile
-└── README.md
-```
+## 👥 Kelompok Bug4Fun
+| No | Nama Lengkap | NIM | Peran |
+|----|---------------|-----|-------|
+| 1 | **Samuel G. Christian Pakpahan** | 221113531 | Ketua / Fullstack Developer |
+| 2 | **Jocelyn** | 221110108 | Frontend Developer |
+| 3 | **Maesi** | 221112816 | Backend Developer |
+| 4 | **Sontiar Eseria Tampubolon** | 221112223 | DevOps & Dokumentasi |
 
 ---
 
-## ⚙️ Cara Instalasi & Menjalankan
+## 🚀 Deskripsi Proyek
+**Expense Tracker** adalah aplikasi berbasis web yang digunakan untuk mencatat pemasukan dan pengeluaran dengan mudah.  
+Dikembangkan menggunakan **Fullstack (Backend + Frontend)** dan di-deploy menggunakan **Docker** serta **GitHub Actions (CI/CD)**.
 
-### 🔹 1. Clone Repository
+---
+
+## ✨ Fitur Utama
+- 💵 Tambah pemasukan dan pengeluaran  
+- 📊 Hitung saldo otomatis  
+- 🧾 Tabel daftar transaksi  
+- 🔁 Sinkronisasi real-time dengan API Backend  
+- 🐳 Deploy otomatis menggunakan Docker Container
+
+---
+
+## 🧩 Tech Stack
+
+| Layer | Teknologi |
+|-------|------------|
+| **Frontend** | React + Vite + TailwindCSS |
+| **Backend** | FastAPI (Python) |
+| **Database** | SQLite |
+| **Containerization** | Docker & Docker Hub |
+| **CI/CD** | GitHub Actions |
+| **Version Control** | Git & GitHub |
+
+---
+
+## ⚙️ Cara Instalasi dan Menjalankan
+
+### 1️⃣ Clone Repository
 ```bash
-git clone https://github.com/samsz07/ex-pense-tracker.git
+git clone https://github.com/sampakpahan17/ex-pense-tracker.git
 cd ex-pense-tracker
 ```
 
----
-
-### 🔹 2. Menjalankan Backend (FastAPI)
+### 2️⃣ Menjalankan Backend (Manual)
 ```bash
 cd be
 python -m venv venv
-venv\Scripts\activate        # (Windows)
+venv\Scripts\activate
 pip install -r requirements.txt
-uvicorn app.main:app --reload
+uvicorn main:app --host 0.0.0.0 --port 8000
 ```
-Backend akan berjalan di: **http://127.0.0.1:8000**
+Backend akan berjalan di: **http://127.0.0.1:8000/transactions/**
 
 ---
 
-### 🔹 3. Menjalankan Frontend (React + Vite)
+### 3️⃣ Menjalankan Frontend (Manual)
 ```bash
-cd ../fe
+cd fe
 npm install
 npm run dev
 ```
@@ -82,14 +85,18 @@ Frontend akan berjalan di: **http://127.0.0.1:5173**
 
 ---
 
-### 🔹 4. Menjalankan dengan Docker Compose
+### 🐳 Menjalankan dengan Docker (lebih mudah)
 ```bash
-docker-compose up --build
+docker pull samsz07/ex-pense-be:latest
+docker pull samsz07/ex-pense-fe:latest
+
+docker run -d -p 8000:8000 samsz07/ex-pense-be
+docker run -d -p 5173:80 samsz07/ex-pense-fe
 ```
 
-Setelah berhasil, buka browser:
-- Frontend → `http://localhost:5173`
-- Backend API → `http://localhost:8000`
+Akses aplikasi di:  
+- Backend API → [http://localhost:8000](http://localhost:8000)  
+- Frontend UI → [http://localhost:5173](http://localhost:5173)
 
 ---
 
@@ -102,29 +109,66 @@ Setiap kali ada push ke branch `main`, GitHub Actions akan otomatis:
 
 ---
 
-## 💾 Backup Kode Lengkap
+## 🖼️ Preview Aplikasi
 
-📁 **Link Google Drive (Full Backup Project)**  
-🔗 [https://drive.google.com/drive/folders/1vTw7TpM8RCr2gZRs-yC5gRXCUXS1e_Ic?usp=sharing](https://drive.google.com/drive/folders/1vTw7TpM8RCr2gZRs-yC5gRXCUXS1e_Ic?usp=sharing)
+| Dashboard | Input Transaksi |
+|------------|----------------|
+| ![Dashboard](https://drive.google.com/uc?export=view&id=YOUR_IMAGE_ID_1) | ![Input](https://drive.google.com/uc?export=view&id=YOUR_IMAGE_ID_2) |
 
----
-
-## 🖼️ Tampilan Aplikasi
-
-### 💵 Dashboard Utama
-![Dashboard](assets/dashboard.png)
-
-### ➕ Form Tambah Transaksi
-![Form](assets/form.png)
+> *(Ganti `YOUR_IMAGE_ID_1` dan `YOUR_IMAGE_ID_2` dengan ID gambar dari Google Drive kalian)*
 
 ---
 
-## 🚀 Teknologi yang Digunakan
-- **Backend:** FastAPI, Python 3.11  
-- **Frontend:** React + Vite + TailwindCSS  
-- **Database:** JSON file (local storage)  
-- **Containerization:** Docker  
-- **CI/CD:** GitHub Actions  
+## 🔗 Link Penting
+- 🧭 **GitHub Repository:** [https://github.com/sampakpahan17/ex-pense-tracker](https://github.com/sampakpahan17/ex-pense-tracker)
+- 🐳 **DockerHub Backend:** [https://hub.docker.com/r/samsz07/ex-pense-be](https://hub.docker.com/r/samsz07/ex-pense-be)
+- 🐳 **DockerHub Frontend:** [https://hub.docker.com/r/samsz07/ex-pense-fe](https://hub.docker.com/r/samsz07/ex-pense-fe)
+- ☁️ **Google Drive Backup:** [https://drive.google.com/drive/folders/1EhKq0qpH2YOW7AlHvyR5X24LUYzYTbSn?usp=sharing](https://drive.google.com/drive/folders/1EhKq0qpH2YOW7AlHvyR5X24LUYzYTbSn?usp=sharing)
+
+---
+
+## 📦 Struktur Proyek
+```
+ex-pense-tracker/
+├── be/                     # Backend (FastAPI)
+│   ├── main.py
+│   ├── requirements.txt
+│   └── Dockerfile
+├── fe/                     # Frontend (React + Vite)
+│   ├── src/
+│   ├── package.json
+│   └── Dockerfile
+└── .github/workflows/      # CI/CD pipeline
+    └── docker-build.yml
+```
+
+---
+
+## 👨‍💻 Kontribusi Anggota
+| Anggota | Kontribusi |
+|----------|-------------|
+| **Samuel G. C. Pakpahan** | Setup Fullstack, Integrasi FE & BE, CI/CD, Docker |
+| **Jocelyn** | UI/UX & Implementasi React Components |
+| **Maesi** | API CRUD & Struktur Database FastAPI |
+| **Sontiar Eseria** | Dockerfile, Deployment, Dokumentasi README |
+
+---
+
+## 🏁 Hasil Akhir
+> Project ini berhasil dijalankan penuh baik di lokal maupun di container Docker.  
+> Semua service berjalan lancar di port 8000 (Backend) & 5173 (Frontend).
+
+---
+
+## 💡 Catatan
+> Dikembangkan untuk tugas **UTS DevOps Universitas Mikroskil**,  
+> dengan fokus pada **CI/CD dan Docker containerization**.
+
+---
+
+## 📞 Kontak
+📧 **Samuel G. C. Pakpahan**  
+🔗 [GitHub: sampakpahan17](https://github.com/sampakpahan17)
 
 ---
 
@@ -133,5 +177,8 @@ Proyek ini dibuat sebagai bagian dari **Ujian Tengah Semester (UTS) - Mata Kulia
 📚 Universitas Mikroskil - 2025
 
 ---
+
+⭐ _Terima kasih telah mengunjungi project kami!_  
+_Jangan lupa kasih star ⭐ di repository ini kalau kamu suka proyeknya._
 
 > 💡 “Build smart, track wisely.” — *Bug4Fun Team*
