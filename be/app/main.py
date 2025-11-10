@@ -57,6 +57,6 @@ def delete_transaction(transaction_id: int):
 @app.get("/balance/")
 def get_balance():
     data = read_db()
-    income = sum(t["amount"] for t in data if t["type"] == "income")
-    expense = sum(t["amount"] for t in data if t["type"] == "expense")
+    income = sum(t["amount"] for t in data if t.get["type"] == "income")
+    expense = sum(t["amount"] for t in data if t.get["type"] == "expense")
     return {"income": income, "expense": expense, "balance": income - expense}
