@@ -97,6 +97,31 @@ dan melakukan **auto-redeploy** jika ada perubahan.
 
 ---
 
+## 💡 Catatan
+> Dikembangkan untuk tugas **UTS DevOps Universitas Mikroskil**,  
+> dengan fokus pada **CI/CD dan Docker containerization**.
+
+---
+
+## 📞 Kontak
+📧 **Samuel G. C. Pakpahan**  
+🔗 [GitHub: sampakpahan17](https://github.com/sampakpahan17)
+
+📧 **Jocelyn**  
+🔗 [GitHub: jocelynng0108](https://github.com/jocelynng0108)
+
+---
+
+## 📜 Lisensi
+Proyek ini dibuat sebagai bagian dari **Ujian Tengah Semester (UTS) - Mata Kuliah DevOps**  
+📚 Universitas Mikroskil - 2025
+
+---
+
+⭐ _Terima kasih telah mengunjungi project kami!_  
+_Jangan lupa kasih star ⭐ di repository ini kalau kamu suka proyeknya._
+
+> 💡 “Build smart, track wisely.” — *Bug4Fun Team*
 ## 🧾 Lisensi
 © 2025 — Kelompok **Bug4Fun**  
 Dibuat untuk keperluan **UTS Mata Kuliah DevOps**, tidak untuk distribusi komersial.
