@@ -69,7 +69,7 @@ cd be
 python -m venv venv
 venv\Scripts\activate
 pip install -r requirements.txt
-uvicorn main:app --reload
+uvicorn app.main:app --reload
 ```
 Backend akan berjalan di: **http://127.0.0.1:8000/transactions/**
 
@@ -93,6 +93,12 @@ docker pull samsz07/ex-pense-fe:latest
 docker run -d -p 8000:8000 samsz07/ex-pense-be
 docker run -d -p 5173:80 samsz07/ex-pense-fe
 ```
+Backend
+[http://localhost:8000](http://localhost:8000/transactions/)
+
+Frontend
+[http://localhost:5173](http://localhost:5173)
+
 
 ---
 
