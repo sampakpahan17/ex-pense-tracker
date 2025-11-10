@@ -55,8 +55,8 @@ export default function ExpenseForm({ refresh }) {
         onChange={(e) => setType(e.target.value)}
         className="border w-full p-2 mb-3 rounded"
       >
-        <option value="expense">Pengeluaran</option>
-        <option value="income">Pemasukan</option>
+        <option value="expense">- Pengeluaran</option>
+        <option value="income"> + Pemasukan</option>
       </select>
       <button
         type="submit"
