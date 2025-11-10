@@ -3,7 +3,7 @@ import { deleteTransaction } from "../services/api";
 export default function ExpenseList({ transactions, refresh }) {
   return (
     <div className="mt-4 bg-white p-4 rounded-2xl shadow-md">
-      <h2 className="font-semibold text-lg mb-2">Daftar Pengeluaran</h2>
+      <h2 className="font-semibold text-lg mb-2">Daftar Pengeluaran dan Pemasukan</h2>
       {transactions.length === 0 ? (
         <p className="text-gray-500 text-sm">Belum ada transaksi</p>
       ) : (
