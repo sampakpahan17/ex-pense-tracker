@@ -5,7 +5,7 @@ export default function ExpenseList({ transactions, refresh }) {
     <div className="mt-4 bg-white p-4 rounded-2xl shadow-md">
       <h2 className="font-semibold text-lg mb-2">Daftar Pengeluaran</h2>
       {transactions.length === 0 ? (
-        <p className="text-gray-500 text-sm">Belum ada transaksi. (x)</p>
+        <p className="text-gray-500 text-sm">Belum ada transaksi</p>
       ) : (
         <ul className="divide-y">
           {transactions.map((t) => (

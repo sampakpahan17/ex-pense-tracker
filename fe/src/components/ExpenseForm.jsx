@@ -25,7 +25,7 @@ export default function ExpenseForm({ refresh }) {
 
   return (
     <form onSubmit={handleSubmit} className="bg-white p-4 rounded-2xl shadow-md">
-      <h2 className="font-semibold mb-2 text-lg">Tambah Pengeluaran (+)</h2>
+      <h2 className="font-semibold mb-2 text-lg">Tambah Pengeluaran</h2>
       <input
         type="text"
         placeholder="Judul"
@@ -55,8 +55,8 @@ export default function ExpenseForm({ refresh }) {
         onChange={(e) => setType(e.target.value)}
         className="border w-full p-2 mb-3 rounded"
       >
-        <option value="expense"> +++ Pengeluaran++++</option>
-        <option value="income"> --- Pemasukan ---</option>
+        <option value="expense">Pengeluaran</option>
+        <option value="income">Pemasukan</option>
       </select>
       <button
         type="submit"

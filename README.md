@@ -6,7 +6,7 @@
 |------|-----|----------------|
 | **Samuel G. Christian Pakpahan** *(Ketua)* | 221113531 | Setup Backend & Frontend, Docker Deployment, GitHub Actions, CI/CD |
 | **Jocelyn** | 221110108 | UI/UX Design, Integrasi Frontend dengan API, Responsiveness |
-| **Maesi** | 221112816 | API Testing, Validasi Data, Dokumentasi Endpoint |
+| **Maesi Sarah** | 221112816 | API Testing, Validasi Data, Dokumentasi Endpoint |
 | **Sontiar Eseria Tampubolon** | 221112223 | Docker Compose Setup, Monitoring, Testing Deployment |
 
 ---
@@ -97,6 +97,35 @@ dan melakukan **auto-redeploy** jika ada perubahan.
 
 ---
 
-## 🧾 Lisensi
+## 💡 Catatan
+> Dikembangkan untuk tugas **UTS DevOps Universitas Mikroskil**,  
+> dengan fokus pada **CI/CD dan Docker containerization**.
+
+---
+
+## 📞 Kontak
+📧 **Samuel G. C. Pakpahan**  
+🔗 [GitHub: sampakpahan17](https://github.com/sampakpahan17)
+
+📧 **Jocelyn**  
+🔗 [GitHub: jocelynng0108](https://github.com/jocelynng0108)
+
+📧 **Sontiar Eseria Tampubolon**
+🔗 [GitHub: Sontiar](https://github.com/Sontiar)
+
+📧 **Maesi Sarah Natasia Br. Simanjuntak**
+🔗 [GitHub: MaesiSarah21](https://github.com/MaesiSarah21)
+
+---
+
+## 📜 Lisensi
 © 2025 — Kelompok **Bug4Fun**  
-Dibuat untuk keperluan **UTS Mata Kuliah DevOps**, tidak untuk distribusi komersial.
+Proyek ini dibuat sebagai bagian dari **Ujian Tengah Semester (UTS) - Mata Kuliah DevOps**  
+📚 Universitas Mikroskil - 2025
+
+---
+
+⭐ _Terima kasih telah mengunjungi project kami!_  
+_Jangan lupa kasih star ⭐ di repository ini kalau kamu suka proyeknya._
+
+> 💡 “Build smart, track wisely.” — *Bug4Fun Team*
