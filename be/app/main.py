@@ -43,14 +43,14 @@ def add_transaction(transaction: Transaction):
     data = read_db()
     data.append(transaction.dict())
     write_db(data)
-    return {"message": "Transaction added"}
+    return {"message": "Transaction added +"}
 
 @app.delete("/transactions/{transaction_id}")
 def delete_transaction(transaction_id: int):
     data = read_db()
     new_data = [t for t in data if t["id"] != transaction_id]
     if len(new_data) == len(data):
-        raise HTTPException(status_code=404, detail="Transaction not found")
+        raise HTTPException(status_code=404, detail="Transaction not found 404")
     write_db(new_data)
     return {"message": "Transaction deleted"}
 
