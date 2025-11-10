@@ -110,10 +110,10 @@ dan melakukan **auto-redeploy** jika ada perubahan.
 📧 **Jocelyn**  
 🔗 [GitHub: jocelynng0108](https://github.com/jocelynng0108)
 
-📧 **Sontiar Eseria Tampubolon**
+📧 **Sontiar Eseria Tampubolon**  
 🔗 [GitHub: Sontiar](https://github.com/Sontiar)
 
-📧 **Maesi Sarah Natasia Br. Simanjuntak**
+📧 **Maesi Sarah Natasia Br. Simanjuntak**  
 🔗 [GitHub: MaesiSarah21](https://github.com/MaesiSarah21)
 
 ---
