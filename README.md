@@ -93,7 +93,12 @@ dan melakukan **auto-redeploy** jika ada perubahan.
 ---
 
 ## 📸 Screenshot Tampilan
-*(Tambahkan screenshot hasil tampilan FE & BE di sini)*
+
+### Backend
+![alt text](image.png)
+
+### Frontend
+![alt text](image-1.png)
 
 ---
 
