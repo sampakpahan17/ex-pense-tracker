@@ -87,8 +87,8 @@ dan melakukan **auto-redeploy** jika ada perubahan.
 - 🌐 **Repository GitHub:** [https://github.com/sampakpahan17/ex-pense-tracker](https://github.com/sampakpahan17/ex-pense-tracker)
 - ☁️ **Backup Drive:** [Google Drive](https://drive.google.com/drive/folders/1EhKq0qpH2YOW7AlHvyR5X24LUYzYTbSn?usp=sharing)
 - 🐳 **Docker Images:**
-  - Backend → ![Backend](https://hub.docker.com/r/samsz07/ex-pense-be)
-  - Frontend → ![Frontend](https://hub.docker.com/r/samsz07/ex-pense-fe)
+  - Backend → [Backend Image](https://localhost:5173)
+  - Frontend → [Frontend Image](http://localhost:8000/transactions/)
 
 ---
 
