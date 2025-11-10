@@ -29,7 +29,7 @@ jobs:
       with:
         context: ./be
         push: true
-        tags: jocelyng0108/ex-pense-be:latest
+        tags: samsz07/ex-pense-be:latest
 
     # ===========================
     # Frontend Image
@@ -39,4 +39,4 @@ jobs:
       with:
         context: ./fe
         push: true
-        tags: jocelyng0108/ex-pense-fe:latest
+        tags: samsz07/ex-pense-fe:latest
