@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: be-expense
+  namespace: expense-tracker
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: be-expense
+  template:
+    metadata:
+      labels:
+        app: be-expense
+    spec:
+      containers:
+      - name: be-expense
+        image: samsz07/expense-backend:latest
+        ports:
+        - containerPort: 8000
+        resources:
+          requests:
+            memory: "128Mi"
+            cpu: "250m"
+          limits:
+            memory: "256Mi"
+            cpu: "500m"

@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fe-expense
+  namespace: expense-tracker
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: fe-expense
+  template:
+    metadata:
+      labels:
+        app: fe-expense
+    spec:
+      containers:
+      - name: fe-expense
+        image: samsz07/expense-frontend:latest
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "100m"
+          limits:
+            memory: "128Mi"
+            cpu: "250m"

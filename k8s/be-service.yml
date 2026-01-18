@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: be-service
+  namespace: expense-tracker
+spec:
+  selector:
+    app: be-expense
+  ports:
+    - protocol: TCP
+      port: 8000
+      targetPort: 8000
+  type: ClusterIP
