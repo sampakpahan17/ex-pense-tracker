@@ -4,7 +4,7 @@ metadata:
   name: be-expense
   namespace: expense-tracker
 spec:
-  replicas: 3
+  replicas: 5
   selector:
     matchLabels:
       app: be-expense
