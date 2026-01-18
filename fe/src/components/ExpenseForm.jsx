@@ -2,67 +2,67 @@ import { useState } from "react";
 import { addTransaction } from "../services/api";
 
 export default function ExpenseForm({ refresh }) {
-  const [title, setTitle] = useState("");
-  const [category, setCategory] = useState("");
-  const [amount, setAmount] = useState("");
-  const [type, setType] = useState("expense");
+  const [form, setForm] = useState({
+    title: "",
+    category: "",
+    amount: "",
+    type: "expense",
+  });
 
-  const handleSubmit = async (e) => {
+  const submit = async (e) => {
     e.preventDefault();
-    const newData = {
-      id: Date.now(),
-      title,
-      category,
-      amount: parseFloat(amount),
-      type,
-    };
-    await addTransaction(newData);
-    setTitle("");
-    setCategory("");
-    setAmount("");
+
+    await addTransaction({
+      title: form.title,
+      category: form.category,
+      amount: Number(form.amount),
+      type: form.type,
+    });
+
+    setForm({ title: "", category: "", amount: "", type: "expense" });
     refresh();
   };
 
   return (
-    <form onSubmit={handleSubmit} className="bg-white p-4 rounded-2xl shadow-md">
-      <h2 className="font-semibold mb-2 text-lg">Tambah Pengeluaran</h2>
+    <form onSubmit={submit} className="bg-white p-4 rounded-2xl shadow-md">
+      <h2 className="font-semibold text-lg mb-2">Tambah Transaksi</h2>
+
       <input
-        type="text"
+        className="border p-2 w-full mb-2 rounded"
         placeholder="Judul"
-        value={title}
-        onChange={(e) => setTitle(e.target.value)}
-        className="border w-full p-2 mb-2 rounded"
+        value={form.title}
+        onChange={(e) => setForm({ ...form, title: e.target.value })}
         required
       />
+
       <input
-        type="text"
+        className="border p-2 w-full mb-2 rounded"
         placeholder="Kategori"
-        value={category}
-        onChange={(e) => setCategory(e.target.value)}
-        className="border w-full p-2 mb-2 rounded"
+        value={form.category}
+        onChange={(e) => setForm({ ...form, category: e.target.value })}
         required
       />
+
       <input
         type="number"
+        className="border p-2 w-full mb-2 rounded"
         placeholder="Jumlah"
-        value={amount}
-        onChange={(e) => setAmount(e.target.value)}
-        className="border w-full p-2 mb-2 rounded"
+        value={form.amount}
+        onChange={(e) => setForm({ ...form, amount: e.target.value })}
         required
       />
+
       <select
-        value={type}
-        onChange={(e) => setType(e.target.value)}
-        className="border w-full p-2 mb-3 rounded"
+        className="border p-2 w-full mb-3 rounded"
+        value={form.type}
+        onChange={(e) => setForm({ ...form, type: e.target.value })}
       >
-        <option value="expense">Transaksi Pengeluaran</option>
-        <option value="income">Transaksi Pemasukan</option>
+        <option value="expense">Expense</option>
+        <option value="income">Income</option>
       </select>
-      <button
-        type="submit"
-        className="bg-blue-600 text-white px-4 py-2 rounded w-full"
-      >
-        Tambah
+
+      <button className="bg-blue-600 text-white px-4 py-2 rounded w-full">
+        Simpan
       </button>
     </form>
   );
