@@ -12,7 +12,7 @@ services:
     image: samsz07/ex-pense-fe:latest
     container_name: expense-frontend
     ports:
-      - "5173:80"
+      - "80:80"
     depends_on:
       - backend
     restart: always
