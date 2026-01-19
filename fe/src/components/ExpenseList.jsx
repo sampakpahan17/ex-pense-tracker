@@ -8,7 +8,7 @@ export default function ExpenseList({ transactions, refresh }) {
       </h2>
 
       {transactions.length === 0 ? (
-        <p className="text-gray-500 text-sm">Belum ada transaksi</p>
+        <p className="text-gray-500 text-sm">Belum ada transaksi apapun</p>
       ) : (
         <ul className="divide-y">
           {transactions.map((t) => (
