@@ -1,7 +1,7 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from typing import List
-from models import Transaction, TransactionCreate
+from app.models import Transaction, TransactionCreate
 import json, os
 
 app = FastAPI(title="Expense Tracker API", version="1.0")
